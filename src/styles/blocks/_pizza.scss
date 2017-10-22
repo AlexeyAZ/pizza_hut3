@@ -1,0 +1,107 @@
+.pizza {
+	position: absolute;
+
+	&_1 {
+		transform: translateY(-5%);
+		left: 200px;
+		max-width: 358px;
+
+		@include media(w1024) {
+			transform: translate(-30%, 0) rotate(-90deg);
+			top: 20vw;
+			left: 0;
+			right: auto;
+			width: 26vw;
+		}
+
+		@include media(w768) {
+			transform: translate(-20%, 0) rotate(-90deg);
+		}
+
+		@include media(w500) {
+			transform: translate(-10%, 0) rotate(-90deg);
+			top: auto;
+			bottom: 35vw;
+			width: 48vw;
+		}
+
+		@include media(w400) {
+			transform: translate(-20%, 0) rotate(-90deg);
+			bottom: auto;
+			top: 85vw;
+			width: 70vw;
+		}
+	}
+
+	&_2 {
+		transform: translate(-50%, -5%);
+		left: 0;
+		max-width: 390px;
+		
+		@include media(w1024) {
+			left: auto;
+			right: 52vw;
+			width: 30vw;
+		}
+
+		@include media(w768) {
+			transform: translate(70%, -45%);
+			left: auto;
+			right: 50vw;
+			width: 30vw;
+		}
+
+		@include media(w500) {
+			transform: translate(-35%, 0) rotate(-90deg);
+			top: auto;
+			bottom: 90vw;
+			right: auto;
+			left: 0;
+			width: 50vw;
+		}
+
+		@include media(w400) {
+			transform: translate(25%, 0) rotate(90deg);
+			top: 94vw;
+			bottom: auto;
+			left: auto;
+			right: 0;
+			width: 74vw;
+		}
+	}
+
+	&_3 {
+		transform: translate(-40%, 0);
+		top: 300px;
+		left: 0;
+		max-width: 376px;
+
+		@include media(w1024) {
+			top: 42vw;
+			left: auto;
+			right: 68vw;
+			width: 26vw;
+		}
+
+		@include media(w768) {
+			top: 48vw;
+			right: 58vw;
+		}
+
+		@include media(w500) {
+			transform: translate(0, 0);
+			top: auto;
+			bottom: 30vw;
+			right: 10vw;
+			width: 50vw;
+		}
+
+		@include media(w400) {
+			transform: translate(-20%, 0);
+			right: auto;
+			left: 0;
+			bottom: 28vw;
+			width: 74vw;
+		}
+	}
+}

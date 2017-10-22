@@ -1,0 +1,272 @@
+.content {
+	background-image: url("../img/bg.jpg");
+	color: white;
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+    
+    @include media(w400) {
+        height: auto;
+		padding-bottom: 110vw;
+    }
+
+	&__row {
+		transform: translateX(50px);
+		text-align: right;
+		padding-left: 40%;
+
+		@include media(w1440) {
+			padding-left: 50%;
+		}
+
+		@include media(w1280) {
+			transform: translateX(10px);
+		}
+
+		@include media(w1100) {
+			transform: translateX(0);
+		}
+
+		@include media(w1024) {
+			padding-left: 35%;
+		}
+
+		@include media(w768) {
+			padding-left: 0;
+		}
+	}
+
+	&__text {
+		font-size: 67px; // 2.65vw;
+		font-weight: bold;
+		line-height: 1;
+		text-transform: uppercase;
+		
+		@include media(w1440) {
+			font-size: 56px;
+		}
+
+		@include media(w1100) {
+			font-size: 52px;
+		}
+
+		@include media(w1024) {
+			font-size: 5.4vw;
+		}
+
+		@include media(w400) {
+			font-size: 9.5vw;
+		}
+	}
+
+	&__text-title {
+		margin-bottom: 0.8vw;
+	}
+
+	&__text-block {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: calc(10px + 0.6vw);
+
+		@include media(w400) {
+			//margin-bottom: 100vw;
+		}
+
+		span {
+			font-size: 1.5em;
+			line-height: 1.2;
+		}
+	}
+
+	&__text-number {
+		font-size: 3.3em;
+		line-height: 0.8;
+	}
+
+	&__text-large {
+		font-size: 3vw;
+	}
+
+	&__promo {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include media(w1024) {
+			justify-content: flex-end;
+		}
+
+		@include media(w400) {
+			margin-bottom: 80vw;
+		}
+	}
+
+	&__promo-text {
+		color: $red;
+		font-size: 0.8em;
+		text-align: left;
+		margin-right: 24px;
+		padding-top: 0.1em;
+
+		@include media(w768) {
+			font-size: 1em;
+		}
+
+		@include media(w400) {
+			font-size: 0.9em;
+			margin-right: 10px;
+		}
+
+		span {
+			font-weight: normal;
+		}
+	}
+
+	&__drink {
+		display: inline-block;
+		vertical-align: top;
+
+		&_cola {
+			margin-top: 1vw;
+			margin-right: 3vw;
+
+			@include media(w768) {
+				width: 19vw;
+				max-width: 141px;
+			}
+
+			@include media(w400) {
+				top: 245vw;
+				right: 10vw;
+				width: 26vw;
+			}
+		}
+
+		&_beer {
+			margin-top: 3.2vw;
+
+			@include media(w768) {
+				width: 19vw;
+				max-width: 145px;
+			}
+
+			@include media(w500) {
+				margin-top: 10vw;
+			}
+
+			@include media(w400) {
+				top: 275vw;
+				right: 3vw;
+				width: 26vw;
+			}
+		}
+
+		@include media(w400) {
+			position: absolute;
+			margin: 0;
+		}
+	}
+
+	&__gamepad {
+		position: absolute;
+		max-width: 198px;
+
+		@include media(w1366) {
+			width: 15vw;
+		}
+
+		@include media(w500) {
+			width: 25vw;
+		}
+
+		@include media(w400) {
+			width: 24vw;
+		}
+
+		&_1 {
+			transform: rotate(22deg);
+			bottom: 34%;
+			right: 74%;
+
+			@include media(w1440) {
+				right: 59%;
+			}
+
+			@include media(w1366) {
+				bottom: 26%;
+			}
+
+			@include media(w1024) {
+				right: 62%;
+				bottom: 40%;
+			}
+
+			@include media(w768) {
+				right: 55%;
+				bottom: auto;
+				top: 30%;
+			}
+
+			@include media(w500) {
+				right: 56%;
+				top: 24%;
+			}
+
+			@include media(w400) {
+				top: 310vw;
+				right: 10vw;
+			}
+		}
+
+		&_2 {
+			transform: rotate(-20deg);
+			right: 62%;
+			bottom: 8%;
+
+			@include media(w1440) {
+				right: 47%;
+			}
+			
+			@include media(w1366) {
+				bottom: 0;
+			}
+
+			@include media(w1024) {
+				right: 55%;
+				bottom: 12%;
+			}
+
+			@include media(w768) {
+				right: 49%;
+			}
+
+			@include media(w500) {
+				bottom: 5%;
+			}
+
+			@include media(w400) {
+				top: 325vw;
+				right: 45vw;
+			}
+		}
+
+		@include media(w400) {
+			//display: none;
+		}
+	}
+
+	&__bottom {
+		position: absolute;
+		left: 0;
+		bottom: 20px;
+		width: 100%;
+
+		@include media(w768) {
+			bottom: 10px;
+		}
+
+		@include media(w400) {
+			position: static;
+		}
+	}
+}

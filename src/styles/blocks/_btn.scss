@@ -1,0 +1,103 @@
+.btn {
+	transition: $trans;
+	background-color: $red;
+	border-radius: 22px;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 1;
+	padding: 12px 30px 8px;
+
+	&_anim {
+		animation: btnAnim 3s infinite;
+		
+		@include media(w1280) {
+			animation: btnAnimNote 3s infinite;
+		}
+	}
+	
+	&:hover {
+		background-color: lighten($red, 5%);
+	}
+
+	// &:hover {
+	// 	animation: btnAnim 0.8s 0s ease-out 1;
+	// }
+
+	@include media(w1024) {
+		font-size: 2.8vw;
+	}
+
+	@include media(w768) {
+		font-size: 3.6vw;
+	}
+
+	@include media(w500) {
+		font-size: 3.8vw;
+	}
+
+	&_large {
+		border-radius: 30px;
+		font-size: 40px; // 2.1vw;
+		line-height: 1;
+		padding: 20px 35px 14px;
+		
+		// @include media(w1366) {
+		// 	font-size: 2.7vw;
+		// }
+
+		// @include media(w1280) {
+		// 	font-size: 3vw;
+		// }
+
+		@include media(w1024) {
+			font-size: 4.6vw;
+		}
+
+		@include media(w400) {
+			font-size: 6vw;
+			padding: 15px 35px 10px;
+		}
+	}
+}
+
+@keyframes btnAnim {
+	from {
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(1.3);
+
+		@include media(w1280) {
+			transform: scale(1.3);
+		}
+	}
+	
+	50% {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1);
+		//box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+	}
+}
+
+@keyframes btnAnimNote {
+	from {
+		transform: scale(1);
+	}
+
+	25% {
+		transform: scale(1.1);
+	}
+	
+	50% {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1);
+		//box-shadow: 0 0 18px 6px rgba(255, 48, 26, 0), 0 0 4px 71px rgba(255, 48, 26, 0);
+	}
+}

@@ -1,0 +1,53 @@
+extends ../templates/layout
+
+
+block vars
+    - var title = 'Main'
+    - var steps = ["Укажи<br> адрес", "Закажи 2 пиццы<br> по 30 см", "выбери пиццу<br> в подарок"]
+
+block content
+    div.content
+        img(src="img/pizza-1.png").pizza.pizza_1
+        img(src="img/pizza-2.png").pizza.pizza_2
+        img(src="img/pizza-3.png").pizza.pizza_3
+        div.content__top
+            div.container
+                div.content__row
+                    img(src="img/gamepad.png").content__gamepad.content__gamepad_1
+                    img(src="img/gamepad.png").content__gamepad.content__gamepad_2
+                    header.header
+                        a(href="https://spb.pizzahut.ru/" target="_blank").header__logo-link
+                            img(src="img/header-logo.svg" alt="").header__logo
+                        img(src="img/header-time.png" alt="").header__time
+                    div.content__text
+                        div.content__text-title.
+                            ТЕбя ждЁт отличный вечер
+                        div.content__text-block
+                            div.content__text-number.
+                                2+1
+                            div
+                                |и третья пицца<br> 
+                                span.
+                                    В ПОДАРОК
+                        div.content__promo
+                            div.content__promo-text
+                                span.
+                                    ПРОМОКОД:<br>
+                                |три пиццы
+                            a(href="https://www.pizzahut.ru/cart/coupon/activate?coupon=%D0%A2%D0%A0%D0%98%20%D0%9F%D0%98%D0%A6%D0%A6%D0%AB" target="_blank").btn.btn_large.btn_anim.
+                                ЗАКАЗАТЬ ПИЦЦУ
+                        img(src="img/cola.png" alt="").content__drink.content__drink_cola
+                        img(src="img/beer.png" alt="").content__drink.content__drink_beer
+        div.content__bottom
+            div.container
+                div.footer
+                    div.steps
+                        each item, index in steps
+                            div.steps__item
+                                div.btn.steps__number
+                                    =index + 1
+                                div.steps__text.
+                                    !{item}
+                                img(src="img/arrow.svg" alt="").steps__arrow
+                    a(href="https://www.pizzahut.ru/cart/coupon/activate?coupon=%D0%A2%D0%A0%D0%98%20%D0%9F%D0%98%D0%A6%D0%A6%D0%AB" target="_blank").btn.steps__btn.
+                            ЗАКАЗАТЬ ПИЦЦУ

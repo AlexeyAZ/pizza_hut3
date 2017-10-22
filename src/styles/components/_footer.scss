@@ -1,0 +1,17 @@
+.footer {
+	border-top: 2px solid white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 24px;
+	
+	@include media(w768) {
+		padding-top: 10px;
+		flex-flow: column;
+	}
+
+	@include media(w400) {
+		border-top: none;
+		align-items: flex-start;
+	}
+}

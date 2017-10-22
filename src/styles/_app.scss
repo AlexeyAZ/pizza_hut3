@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    
+    @include media(w400) {
+        height: auto;
+    }
+}
+
+body {
+    font-family: "BebasNeue", Arial, Helvetica, sans-serif;
+    position: relative;
+    line-height: 1.5;
+    min-width: $min-width;
+    height: 100%;
+
+    @include media(w400) {
+        height: auto;
+    }
+}
